@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+    <ion-label> Clique no botão abaixo (pfv) </ion-label>
+    <ion-input [(ngModel)]="valor" placeholder="Insira valor aqui"></ion-input>
+    <ion-button (click)="mostrarAlerta(valor)">Aqui</ion-button>
+    <ion-button (click)="soVamo()">Eae</ion-button>
+</ion-content>
