@@ -1,20 +1,43 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Mercado App (ainda sem nome ksksks)
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="cards">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>O maior deles!</ion-card-title>
+      </ion-card-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      <ion-card-content>
+        <ion-img src="../../assets/img1.jpg" alt="img"></ion-img>
+        Aqui vai um textinho explicando pq o App é bom
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Mais praticidade!</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-img src="../../assets/img2.jpg" alt="img2"></ion-img>
+        Experimente fazer suas compras online e poupe tempo!
+      </ion-card-content>
+    </ion-card>
+
   </div>
+  <p id="criadores">by: Ana, Jovane e Rafão</p>
+  <br><br><br><br>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button id="inscrever" size="medium" (click)="cadastro()">Cadastrar-me</ion-button>
+    <ion-button id="entrar" size="medium" (click)="login()">Entrar</ion-button> <br>
+  </ion-toolbar>
+
+</ion-footer>

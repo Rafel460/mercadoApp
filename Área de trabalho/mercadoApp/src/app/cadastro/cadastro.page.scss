@@ -1,0 +1,33 @@
+.big_brain{
+    background-color: #E6E6FA;
+    border-radius: 30px;
+}
+.inicio{
+    text-align: center;
+    
+    h1{
+        font-weight: bold;
+    }
+    p{
+        font-family: cursive;
+    }
+}
+.cadastro{
+    margin-left: 30px;
+    ion-input{
+        --padding-bottom: 3px;
+        background-color: #D8BFD8;
+        border-radius: 30px;
+        --padding-end: 20px;
+        margin-right: 20px;
+    }
+}
+#botao_inscricao{
+    --background: #BC8F8F;
+    --border-radius: 30px;
+    --background-activated: white;
+    margin-left: 70px;
+}
+#texticulo{
+    margin-top: 10px;
+}
