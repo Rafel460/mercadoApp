@@ -1,0 +1,30 @@
+.titulo{
+    text-align: center;
+    
+    h1{
+        font-weight: bold;
+    }
+    p{
+        font-family: cursive;
+    }
+}
+.inception{
+        background-color: #E6E6FA;
+        border-radius: 30px;
+}
+.dados{
+    margin-left: 30px;
+    ion-input{
+        --padding-bottom: 3px;
+        background-color: #D8BFD8;
+        border-radius: 30px;
+        --padding-end: 20px;
+        margin-right: 20px;
+    }
+}
+#botao_entrar{
+    --background: #BC8F8F;
+    --border-radius: 30px;
+    --background-activated: white;
+    margin-left: 100px;
+}

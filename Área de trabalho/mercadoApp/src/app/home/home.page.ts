@@ -14,7 +14,7 @@ export class HomePage {
   }
 
   login(){
-    alert("Função ainda não está pronta :(")
+    this.router.navigate(['login']);
   }
 
 }

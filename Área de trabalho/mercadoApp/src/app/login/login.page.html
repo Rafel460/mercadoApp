@@ -1,0 +1,21 @@
+<ion-header>
+ <br>
+</ion-header>
+
+<ion-content>
+  <div class="titulo">
+    <h1>Vamos começar as compras!</h1>
+    <p>Insira os dados abaixo</p>
+    <ion-img src="../../assets/login.jpg" alt="."></ion-img>
+  </div>
+  <div class="inception">
+  <div class="dados">
+    <ion-label position="floating">Email:</ion-label>
+    <ion-input placeholder="Insira o email aqui" type="text" [(ngModel)]="usuario.email" name="email"></ion-input>
+    <ion-label position="floating">Senha:</ion-label>
+    <ion-input placeholder="Insira a senha aqui" type="password" [(ngModel)]="usuario.senha" name="senha"></ion-input>
+    <br>
+  </div>
+  </div>
+    <ion-button size="medium" id="botao_entrar" (click)="login(usuario.email, usuario.senha)">Entrar</ion-button>
+</ion-content>
