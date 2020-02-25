@@ -1,7 +1,5 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
+  <br>
 </ion-header>
 
 <ion-content>
@@ -14,13 +12,13 @@
     <div class="cadastro">
       <br>
       <ion-label position="floating">Nome: </ion-label>
-      <ion-input type="text" placeholder="Insira aqui"></ion-input>
+      <ion-input type="text" placeholder="Insira aqui" [(ngModel)]="nome" name="nome"></ion-input>
       <ion-label position="floating">Email: </ion-label>
-      <ion-input type="text" placeholder="Insira aqui"></ion-input>
+      <ion-input type="text" placeholder="Insira aqui" [(ngModel)]="email" name="email"></ion-input>
       <ion-label position="floating">Senha: </ion-label>
-      <ion-input type="password" placeholder="Insira aqui"></ion-input>
+      <ion-input type="password" placeholder="Insira aqui" [(ngModel)]="senha" name="senha"></ion-input>
       <ion-label position="floating">Repita a senha: </ion-label>
-      <ion-input type="password" placeholder="Insira aqui"></ion-input>
+      <ion-input type="password" placeholder="Insira aqui" [(ngModel)]="senha_c" name="senha_c"></ion-input>
       <br>
       <ion-checkbox checked="false"></ion-checkbox><ion-label id="texticulo">Desejo criar uma conta</ion-label>
       <br><br>
@@ -30,6 +28,6 @@
 </ion-content>
 <ion-footer>
   <ion-toolbar>
-    <ion-button id="botao_inscricao"> Cadastrar-me!</ion-button>
+    <ion-button id="botao_inscricao" (click)="inscrever(nome, email, senha, senha_c)"> Cadastrar-me!</ion-button>
   </ion-toolbar>
 </ion-footer>
