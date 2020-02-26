@@ -1,0 +1,7 @@
+# mercadoApp
+Todos os scripts aqui colocados foram feitos por:
+Rafael Monteiro Zancanaro;
+Giovane Vieira;
+Ana Lívia Mendonça
+E possuem total propriedade intelectual deles.
+Caso eventualmente seja criada alguma tecnologia ou método diferente que interesse terceiros, por favor, coloque os devidos créditos.
