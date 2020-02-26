@@ -10,7 +10,7 @@
 }
 .malandrinha{
  background-color: #E6E6FA;
- border-radius: 30px;
+
 }
 .ana{
     align-content: center;
@@ -32,4 +32,25 @@
     font-size: smaller;
     margin-left: 70px;
     margin-top: -80px;
+}
+#nome_jovane{
+    text-align: center;
+}
+#nome_rafao{
+    text-align: center;
+}
+#botao_twitter_rafao{
+    --border-radius : 40px;
+}
+.rafael{
+    background-color: #00FFFF;
+    border-radius: 30px;
+}
+.giovane{
+    background-color: #66CDAA;
+    border-radius: 30px;
+}
+.ana{
+    background-color: #7FFFD4;
+    border-radius: 30px;
 }
