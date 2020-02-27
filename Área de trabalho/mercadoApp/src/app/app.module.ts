@@ -5,7 +5,7 @@ import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-
+import {ErroEmailComponent} from './componentes/erro-email/erro-email.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
@@ -15,8 +15,8 @@ import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, ErroEmailComponent],
+  entryComponents: [ErroEmailComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AngularFireDatabaseModule, FormsModule, AngularFireModule.initializeApp({
     apiKey: "AIzaSyDHSNPr0Zjw4CsF1UaG6WFs-1dHayX3V40",
     authDomain: "projetomercado-67fee.firebaseapp.com",

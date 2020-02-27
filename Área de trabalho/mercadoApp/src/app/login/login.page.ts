@@ -3,6 +3,9 @@ import{AngularFireAuth} from 'angularfire2/auth';
 import{Usuario} from '../classes/usuario/usuario';
 import{ToastController, AlertController} from '@ionic/angular';
 import {Router} from '@angular/router';
+import {ModalController} from '@ionic/angular';
+import {NavController, NavParams} from '@ionic/angular';
+import { ErroEmailComponent } from '../componentes/erro-email/erro-email.component';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -10,28 +13,23 @@ import {Router} from '@angular/router';
 })
 export class LoginPage implements OnInit {
   usuario : Usuario = new Usuario();
-  constructor(private autenticacao : AngularFireAuth, private toast : ToastController, private alerta : AlertController, private router: Router) { }
+  constructor(private autenticacao : AngularFireAuth, private toast : ToastController,
+   private alerta : AlertController, private router: Router, private modal : ModalController) { }
   cont : number = 0;
   ngOnInit() {
   }
-  async pedidoRedefinicao(email){
-    const alerte = await this.alerta.create({
-      header : 'Oops',
-      message: 'Parece que você errou sua senha várias vezes, deseja mandar um pedido de redefinição de senha no seu e-mail?',
-      buttons: [{text : 'Não'},{
-        text : 'Sim',
-        handler : ()=>{
-          this.autenticacao.auth.sendPasswordResetEmail(email).catch((erro) => {console.log('Deu ruim')})
-        }
-      }]
+  async logError(email){
+    const deu_r = await this.modal.create({
+      component : ErroEmailComponent,
+      componentProps : {'email' : email}
     })
-    await alerte.present();
+    await deu_r.present();
   }
   async loginErro(email){
     this.cont = this.cont+1;
     console.log(this.cont);
     if(this.cont == 3){
-      this.pedidoRedefinicao(email)
+      this.logError(email)
     }
     const error = await this.toast.create({
       message : 'Email ou senha incorretos, por favor, tente novamente',
