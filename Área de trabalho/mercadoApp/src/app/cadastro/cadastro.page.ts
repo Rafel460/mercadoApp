@@ -5,6 +5,7 @@ import {Router} from '@angular/router';
 import {Usuario} from '../classes/usuario/usuario';
 import {ToastController} from '@ionic/angular';
 import {AlertController} from '@ionic/angular';
+import {Erro} from '../classes/erro/erro';
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.page.html',
@@ -12,6 +13,7 @@ import {AlertController} from '@ionic/angular';
 })
 export class CadastroPage implements OnInit {
   usuario: Usuario = new Usuario();
+  erro : Erro = new Erro();
   constructor(private autenticacao : AngularFireAuth, private banco: AngularFireDatabase, private router: Router, private toast: ToastController, private alerta : AlertController) { }
 
   ngOnInit() {
@@ -21,14 +23,16 @@ export class CadastroPage implements OnInit {
       header: "Ocorreu um erro",
       message: "Não foi possível concluir o seu cadastro, por favor, tente novamente e caso o erro persista, envie-nos um email",
       buttons: [{
-        text: 'Enviar email',
+        text: 'Ok',
         handler: () =>{
+      
           this.router.navigate(['home']);
         }
-      }, {text: 'Ok'}]
+      }]
     })
     await vish.present();
   }
+
   async senhaErro(){
     const ruim = await this.toast.create({
       message : 'Senhas não conferem',
@@ -37,6 +41,7 @@ export class CadastroPage implements OnInit {
     })
     await ruim.present();
   }
+
   inscrever(nome, email, senha, senha_c){
     this.usuario.nome = nome;
     this.usuario.email = email;

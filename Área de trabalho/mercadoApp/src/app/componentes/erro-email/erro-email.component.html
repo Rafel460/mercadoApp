@@ -3,8 +3,15 @@
 </ion-header>
 
 <ion-content>
-  <h2>Deu certo!</h2>
-  <p>O e-mail é {{email}}</p>
-  <ion-button (click)="fechar()">Clica aqui</ion-button>
-  <ion-img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia1.tenor.com%2Fimages%2Fa681ffe0d41a4c64d0ef00e6e013fe3e%2Ftenor.gif%3Fitemid%3D9822316&f=1&nofb=1" alt="eita"></ion-img>
+  <div src="inception">
+    <div src="titulo">
+    <h2>Oops!</h2>
+    <p>Parece que você digitou uma senha incorreta várias vezes...</p>
+    <p>Gostaria de enviar uma solicitação para redefinir sua senha? Caso queira, insira o email abaixo e verifique a sua caixa de mensagens!</p>
+    <ion-img src="../../../assets/mascote_pinterest.jpg"></ion-img>
+    </div>
+    </div>
+    <ion-input [(ngModel)]="email" placeholder="Insira o email aqui" ></ion-input>
+    <ion-button (click)="enviarEmail(email)">Enviar email!</ion-button>
+   <ion-button id="botao_nao" (click)="fechar()">Não, obrigado!</ion-button>
 </ion-content>
