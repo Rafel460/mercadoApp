@@ -34,6 +34,7 @@ export class LoginPage implements OnInit {
     const error = await this.toast.create({
       message : 'Email ou senha incorretos, por favor, tente novamente',
       buttons : ['Ok'],
+      position : "top",
       duration : 2000
     })
     await error.present();

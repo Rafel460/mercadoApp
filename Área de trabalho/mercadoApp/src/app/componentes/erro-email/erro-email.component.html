@@ -3,15 +3,18 @@
 </ion-header>
 
 <ion-content>
-  <div src="inception">
-    <div src="titulo">
+  <div class="inception">
+    <div class="titulo">
     <h2>Oops!</h2>
     <p>Parece que você digitou uma senha incorreta várias vezes...</p>
     <p>Gostaria de enviar uma solicitação para redefinir sua senha? Caso queira, insira o email abaixo e verifique a sua caixa de mensagens!</p>
-    <ion-img src="../../../assets/mascote_pinterest.jpg"></ion-img>
+    <br>
     </div>
     </div>
-    <ion-input [(ngModel)]="email" placeholder="Insira o email aqui" ></ion-input>
-    <ion-button (click)="enviarEmail(email)">Enviar email!</ion-button>
+    <ion-label position="floating">Insira o email na caixa abaixo: </ion-label>
+    <ion-input id="campo_email" [(ngModel)]="email" placeholder="Insira o email aqui" ></ion-input>
+    <div class="botoes">
+      <ion-button (click)="enviarEmail(email)">Enviar email!</ion-button>
    <ion-button id="botao_nao" (click)="fechar()">Não, obrigado!</ion-button>
+    </div>
 </ion-content>

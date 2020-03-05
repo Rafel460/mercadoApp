@@ -16,7 +16,7 @@ export class ErroEmailComponent implements OnInit {
     this.autenticacao.auth.sendPasswordResetEmail(email).then( () => {this.fechar()}).catch((erro)=>{console.log('Ocorreu um erro')} )
   }
 
-  fechar(){
+  async fechar(){
     this.modal.dismiss();
   }
 }
