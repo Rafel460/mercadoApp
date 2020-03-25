@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router';
+import {AlertController} from "@ionic/angular";
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -7,7 +8,7 @@ import {Router} from '@angular/router';
 })
 export class HomePage {
 
-  constructor(private router : Router) {}
+  constructor(private router : Router, private alerta: AlertController) {}
 
   //opções do slide
  slideOpts = {
@@ -69,7 +70,16 @@ export class HomePage {
     },
   }
 }
+//fim das opções do slide
 
+  async mostrarAlerta1(){
+    const alerta1 = await this.alerta.create({
+      header: 'Bem vindo ao MercadoApp!',
+      message: '<br> Crie uma conta e tenha a experiência de fazer compras online!',
+      buttons: ['Ok!']
+    });
+    await alerta1.present();
+  }
   cadastro(){
     this.router.navigate(["cadastro"]);
   }

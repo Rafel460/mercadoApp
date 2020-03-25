@@ -7,15 +7,17 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-slides pager="true" [options]="slideOpts">
+  <ion-slides pager="false" [options]="slideOpts">
     <ion-slide>
         <ion-card>
           <ion-card-header>
             <ion-card-title>O maior deles!</ion-card-title>
           </ion-card-header>
         <ion-card-content class="imgcont"> 
-          <ion-img src="../../assets/mascote_celular.jpg" alt="img"></ion-img>
-            <p class="txtcont">Clique em mim!</p> <br>
+          <ion-img src="../../assets/mascote_celular.jpg" alt="img" (click)="mostrarAlerta1()"></ion-img>
+            <p class="txtcont">Clique em mim!</p> 
+            <p class="txt txtarrasta">Arraste para a direita -></p>
+            <br>
 
         </ion-card-content>
            
@@ -30,7 +32,9 @@
         </ion-card-header>
         <ion-card-content class="imgcont">
           <ion-img src="../../assets/img2.jpg" alt="img2"></ion-img>
-           <p class="txtcont">Experimente fazer suas compras online e poupe tempo!</p><br>
+           <p class="txtcont">Experimente fazer suas compras online e poupe tempo!</p>
+           <p class="txt txtarrasta">Arraste para a direita -></p>
+           <br>
         </ion-card-content>
       </ion-card>  
     </ion-slide>
