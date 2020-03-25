@@ -7,29 +7,37 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="cards">
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>O maior deles!</ion-card-title>
-      </ion-card-header>
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>O maior deles!</ion-card-title>
+          </ion-card-header>
+        <ion-card-content class="imgcont"> 
+          <ion-img src="../../assets/mascote_celular.jpg" alt="img"></ion-img>
+            <p class="txtcont">Clique em mim!</p> <br>
 
-      <ion-card-content>
-        <ion-img src="../../assets/mascote_celular.jpg" alt="img"></ion-img>
-        Aqui vai um textinho explicando pq o App é bom
-      </ion-card-content>
-    </ion-card>
+        </ion-card-content>
+           
+         
+        </ion-card>
+    </ion-slide>
+    
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Mais praticidade!</ion-card-title>
+        </ion-card-header>
+        <ion-card-content class="imgcont">
+          <ion-img src="../../assets/img2.jpg" alt="img2"></ion-img>
+           <p class="txtcont">Experimente fazer suas compras online e poupe tempo!</p><br>
+        </ion-card-content>
+      </ion-card>  
+    </ion-slide>
+  </ion-slides>
+  
 
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Mais praticidade!</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-img src="../../assets/img2.jpg" alt="img2"></ion-img>
-        Experimente fazer suas compras online e poupe tempo!
-      </ion-card-content>
-    </ion-card>
 
-  </div>
   <p id="criadores"><a href="criadores">by: Ana, Jovane e Rafão</a></p>
   <br><br><br><br>
 </ion-content>
